@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="styles/styles.css">
   <base href="https://htmlacademy-htmlcss.github.io/2054473-sedona-34/3/">
 </head>
 
@@ -25,7 +25,7 @@
           <a class="navigation-link" href="catalog.html">Гостинницы</a>
         </li>
       </ul>
-      <ul class="navigation-list navigation-user">
+      <ul class="navigation-user">
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <span class="visually-hidden">Поиск</span>
@@ -38,7 +38,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">Хочу сюда</a>
+          <a class="navigation-link btn btn-here" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -49,25 +49,24 @@
     <section class="main-slider">
       <div class="main-slider welcome">
         <h1 class="visually-hidden">Гостинницы Седоны</h1>
-        <img src="../images/slider_background.jpg" width="1200" height="485" alt="Welcome to the gorgeous Sedona">
+        <img src="images/slider_background.jpg" width="1200" height="485" alt="Welcome to the gorgeous Sedona">
       </div>
     </section>
 
     <section class="advantages">
       <div class="adv-reason">
-        <h2 class="visually-hidden">Преимущества Седоны</h2>
-        <h3>Седона - небольшой городок в Аризоне, заслуживающий большего!</h3>
+        <h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       </div>
       <ol class="adv-cols">
         <li>
-          <div class="adv-cols-1">
+          <div class="adv-cols-w">
             <h4>Настоящий городок</h4>
             <p>— №1 —</p>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <img src="../images/town_sedona.jpg" width="800" height="384" alt="Городок Седона">
-          <ul>
+          <img src="images/town_sedona.jpg" width="800" height="384" alt="Городок Седона">
+          <ul class="adv-rows-b">
             <li>
               <h4>Жилье</h4>
               <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -83,25 +82,25 @@
           </ul>
         </li>
         <li>
-          <img src="../images/devil_bridge.jpg" width="800" height="384" alt="Мост дьявола">
-          <div class="adv-cols-1">
+          <img src="images/devil_bridge.jpg" width="800" height="384" alt="Мост дьявола">
+          <div class="adv-cols-w">
             <h4>Там есть мост дьявола</h4>
             <p>— №2 —</p>
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </div>
         </li>
         <li>
-          <h4>Там есть мост дьявола</h4>
+          <h4>Небольшая площадь</h4>
           <p>— №3 —</p>
           <p>Все достопримечательности находятся очень близко</p>
         </li>
         <li>
-          <h4>Там есть мост дьявола</h4>
+          <h4>Красивая дорога</h4>
           <p>— №4 —</p>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
         <li>
-          <h4>Там есть мост дьявола</h4>
+          <h4>Мало туристов</h4>
           <p>— №5 —</p>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </li>
@@ -111,7 +110,7 @@
     <section class="hotel">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <button class="btn hotel-btn" type="button">Поиск гостиницы в седоне</button>
+      <button class="btn btn-hotel" type="button">Поиск гостиницы в седоне</button>
     </section>
 
     <section class="subscribe">
@@ -119,7 +118,7 @@
       <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form action="https://echo.htmlacademy.ru" name="subscribe" method="post">
         <input class="subscribe-input" type="email" placeholder="Ваш e-mail">
-        <button class="btn subscribe-btn" type="submit">Подписаться</button>
+        <button class="btn btn-sub" type="submit">Подписаться</button>
       </form>
     </section>
   </main>
@@ -144,8 +143,8 @@
           </a>
         </li>
       </ul>
-      <span class="footer-phone"><a href="tel:+78128121212">+7 (812) 812-12-12</a></span>
-      <a href="https://htmlacademy.ru/"><img class="footer-html-logo" src="../images/ico/htmlacademy.svg" width="115"
+      <span class="phone"><a href="tel:+78128121212">+7 (812) 812-12-12</a></span>
+      <a href="https://htmlacademy.ru/"><img class="footer-html-logo" src="images/ico/htmlacademy.svg" width="115"
           height="33" alt="Логотип HTML Academy"></a>
     </section>
   </footer>
