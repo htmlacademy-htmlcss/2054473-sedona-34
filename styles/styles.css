@@ -1,308 +1,276 @@
-
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+  /* своевременная подгрузка шрифта */
+}
 
 @font-face {
-    font-family: "PT Sans";
-    font-weight: 400;
-    font-style: normal;
-    src: url("../fonts/ptsans-400.woff2") format("woff2");
-    font-display: swap; /* своевременная подгрузка шрифта */
-  }
-  @font-face {
-    font-family: "PT Sans"; 
-    font-weight: 700;
-    font-style: normal;
-    src: url("../fonts/ptsans-700.woff2") format("woff2");
-    font-display: swap;
-  }
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
 
 body {
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    background-color:#f2f2f2;
-	margin: 0;
-	color:#000;
-}
-a {
-	color:#000;
-	text-decoration: none;
-}
-
-p {
-	font-size: 22px;
-	line-height: 26px;
-	text-align: center;
-	color: #333;
-}
-
-h1 {
-	font-weight: 700;
-	font-size: 60px;
-	line-height: 78px;
-	text-transform: capitalize;	
-}
-
-h2 {
-    font-weight: 700;
-	font-size: 30px;
-	line-height: 36px;
-	text-align: center;
-	text-transform: uppercase;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-style: normal;
+  background-color: #f2f2f2;
+  margin: 0;
+  color: #000;
 
 }
 
-h3 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 26px;
-    text-align: center;
-    text-transform: uppercase;
-}
-h4 {
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 26px;
-	text-transform: capitalize;	
-	
+.link {
+  color: #000;
+  text-decoration: none;
 }
 
-li {
-	list-style: none;	
+
+.par-10 {
+  font-size: 10px;
+  line-height: 13px;
 }
 
-fieldset {
-	
-	border:none;
+.par-16 {
+  font-size: 16px;
+  line-height: 21px;
 }
 
-.navigation-link {
-    font-size: 20px;
-    line-height: 26px;
-    font-weight:700;
-    text-transform: capitalize;
+.par-18 {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.par-20 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.par-22 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+
+.caption-1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+  text-transform: capitalize;
+}
+
+.caption-2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.caption-3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+
+}
+
+.cap {
+  text-transform: capitalize;
+}
+
+
+
+.black {
+  color: #000;
+}
+
+.white {
+  color: #fff;
+}
+
+.gray {
+  color: #333;
+}
+
+.adv {
+  text-align: center;
+}
+
+.adv-cols-w {
+  color: #fff;
+}
+
+.no-border {
+  border: none;
+}
+
+.nav-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #000;
 }
 
 .fav-reactangle {
-	font-weight: 400;
-	font-size: 10px;
-	line-height: 13px;
-	text-align: center;
-	background-color: #7db54f;
-	color: #fff;
-	width: 20px;
-	height: 20px;
-	border-radius:10px;
-	padding: 2px;
+  text-align: center;
+  background-color: #7db54f;
+  color: #fff;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 10px;
+  padding: 2px;
 }
 
 .btn {
-	background: #756157;
-	border-radius: 4px;
-	text-align: center;
-	text-transform: uppercase;
-	border: none;
-	cursor: pointer;
-	font-weight: 700;
-	font-style: normal;
-	color: #fff;
+  font-family: "PT Sans", "Arial", sans-serif;
+  background-color: #756157;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  padding: 10px 25px 10px 25px;
 }
 
 .btn-here {
-	font-size: 16px;
-	line-height: 20px;
-	height: 37px;
-	width: 160px;
-	padding: 8px 35px 8px 35px;      /* не факт */	 
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 37px;
+  min-width: 160px;
+  padding: 8px 35px 8px 35px;
+  /* не факт */
 }
 
 .btn-hotel {
-	font-size: 20px;
-	line-height: 36px;
-	height: 60px;
-	width: 574px;
-	padding: 12px 55px 12px 55px; 	 /* не факт */	
+  font-size: 20px;
+  line-height: 36px;
+  min-height: 60px;
+  min-width: 574px;
+  padding: 12px 55px 12px 55px;
+  /* не факт */
 }
 
 .btn-sub {
-	font-size: 20px;
-	line-height: 36px;
-	height: 60px;
-	width: 200px;
-	background: #82B3D3;
-	border-radius: 0px 10px 10px 0px;
-	padding: 8px 5px 8px 5px; 
+  font-size: 20px;
+  line-height: 36px;
+  min-height: 60px;
+  min-width: 200px;
+  background-color: #82B3D3;
+  border-radius: 0px 10px 10px 0px;
+  padding: 8px 5px 8px 5px;
 }
 
 .btn-submit {
-	font-size: 16px;
-	line-height: 20px;
-	font-weight: 700;
-	height: 48px;
-	width: 160px;
-	background: #82B3D3;
-	border-radius: 4px; 
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  min-height: 48px;
+  min-width: 160px;
+  background-color: #82B3D3;
+  border-radius: 4px;
 }
 
-.btn-reset {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 20px;
-	color: #fff;
-	background: none;
-	border:none;
-	cursor:pointer;
-}
-
-.product-card-more {
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 20px;
-	padding: 10px 25px 10px 25px;
+.form-reset {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .product-card-fav {
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 20px;
-	padding: 10px 25px 10px 25px;
-	background: #82B3D3;
+  background-color: #82B3D3;
 }
 
 .product-card-rating {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 20px;
-	padding: 10px 25px 10px 25px;
-	background-color: #ccc;
-	color: #333;
-	cursor:auto;
-}
-
-.adv-reason h2 {
-	 
-	width:620px;
-}
-
-.adv-reason, .hotel,  p {
-	font-weight: 400;
-	font-size: 22px;
-	line-height: 26px;
-	text-align: center;
-}
-
-
-
-.adv-cols p {
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-}
-
-.adv-cols h4 {
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 28px;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.adv-cols-w p {	
-	color: #fff;
-	
-}
-
-.adv-cols-w h4 {	
-	color: #fff;
-}
-
-.adv-rows-b p {
-	color: #333;
-}
-
-.adv-rows-b h4 {
-	color: #000;
+  font-weight: 400;
+  background-color: #ccc;
+  color: #333;
+  cursor: auto;
 }
 
 .hotel {
-	background-color: #fff;
+  background-color: #fff;
+  text-align: center;
 }
 
 .subscribe {
-	background: url('../images/background_email.jpg') no-repeat;
-	background-size: cover;
-	height:411px;
-	color: #fff;	
-}
-.subscribe p {
-	color: #fff;	
-	
+  background: url('../images/background_email.jpg') no-repeat;
+  background-size: cover;
+  height: 411px;
+  color: #fff;
+  text-align: center;
 }
 
- 
+.subscribe-cat {
+  text-align: center;
+}
 
 .phone {
-	font-weight: 400;
-	font-size: 40px;
-	line-height: 40px;
-	text-align: center;
-	text-transform: uppercase;
-	color:#000;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+
 }
 
-.cat-slider {	
-	color:#fff;
-	background: url('../images/slider_background.jpg') no-repeat;
-	background-size: cover;
-	/*height:411px;*/
+.cat-slider {
+  color: #fff;
+  background: url('../images/slider_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*height:411px;*/
 }
- 
 
 .filter a {
-	color:#fff;
+  color: #fff;
+  text-decoration: none;
 }
 
 .filter-label {
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 21px;
-	color: #fff;
-	
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .select-control {
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: center;
-	
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
 }
 
-.product-card-title {
-	font-style: normal;
-	font-weight: 700;
-	font-size: 24px;
-	line-height: 28px;
-	text-align: left;
-}
-
-.product-card-name {
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 21px;
-	text-align: left;
+.product-list {
+  text-align: left;
 }
 
 .pagination-link {
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 36px;
-	text-align: center;
-	text-transform: uppercase;
-	color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
 }
+
 .pagination-current {
-	color: #000;
+  color: #000;
 }
