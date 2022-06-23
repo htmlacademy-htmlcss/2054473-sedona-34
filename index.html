@@ -18,7 +18,7 @@
           </a>
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Главная</a>
+              <a class="nav-link nav-link-hover" href="index.html">Главная</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">О Седоне</a>
@@ -28,18 +28,18 @@
             </li>
           </ul>
           <ul class="nav-user">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li class="nav-user-item">
+              <a class="nav-link nav-icon-search" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li class="nav-user-item">
+              <a class="nav-link nav-icon-fav" href="#">
                 <span class="visually-hidden">Избранное</span>
                 <sup class="fav-reactangle par-10">12</sup>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-user-item">
               <a class="nav-link btn btn-here" href="#">Хочу сюда!</a>
             </li>
           </ul>
@@ -63,9 +63,11 @@
           <ul class="reasons">
             <li class="reasons-main-flex">
               <div class="reason-main-col white">
-                <h3 class="reason-cols-caption">Настоящий городок</h3>
-                <p class="reason-cols-num-18">— №1 —</p>
-                <p class="reason-cols-par-18">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                <div class="reason-li-width">
+                  <h3 class="reason-cols-caption">Настоящий городок</h3>
+                  <p class="reason-cols-num-18">— №1 —</p>
+                  <p class="reason-cols-par-18">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                </div>
               </div>
               <div class="reason-main-img">
                 <img src="images/town_sedona.jpg" width="800" height="384" alt="Town Sedona">
@@ -155,24 +157,24 @@
         <h2 class="visually-hidden">Контакты</h2>
         <ul class="footer-soc-list">
           <li class="footer-soc-item">
-            <a class="button" href="https://vk.com/htmlacademy">
+            <a class="footer-soc-item-vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="footer-soc-item">
-            <a class="button" href="https://t.me/htmlacademy">
+            <a class="footer-soc-item-telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="footer-soc-item">
-            <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="footer-soc-item-youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
         </ul>
-        <div class="phone"><a href="tel:+78128121212" class="link">+7 (812) 812-12-12</a></div>
-        <a href="https://htmlacademy.ru/"><img class="footer-html-logo" src="images/ico/htmlacademy.svg" width="115"
-            height="33" alt="Логотип HTML Academy"></a>
+        <div class="footer-phone"><a href="tel:+78128121212" class="link">+7 (812) 812-12-12</a></div>
+        <div class="footer-html-logo"><a href="https://htmlacademy.ru/"><img src="images/ico/htmlacademy.svg" width="115"
+            height="33" alt="Логотип HTML Academy"></a></div>
       </footer>
     </div>
   </body>
