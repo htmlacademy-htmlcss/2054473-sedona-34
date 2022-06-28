@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div class="page-layout">
+    <div class="page-box">
       <header class="header-nav">
         <nav class="nav">
           <a href="index.html">
@@ -21,8 +21,8 @@
             <li class="nav-item">
               <a class="nav-link" href="#">О Седоне</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link-hover" href="catalog.html">Гостиницы</a>
+            <li class="nav-item nav-link-active">
+              <a class="nav-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
           <ul class="nav-user">
@@ -130,17 +130,16 @@
           <h3 class="visually-hidden">Каталог гостиниц</h3>
           <ul class="product-list">
             <li class="product-card">
-              <a class="product-card-link link" href="#">
-                <img class="product-card-image" src="images/amara_resort.jpg" alt="Amara resort & spa">
+
+              <img class="product-card-image" src="images/amara_resort.jpg" alt="Amara resort & spa">
+              <a class="product-card-link" href="#">
                 <h3 class="product-card-caption">Amara Resort & Spa</h3>
               </a>
-              <p class="product-card-name par-18">Гостиница</p>
-              <p class="product-card-name par-18">От 4000 ₽</p>
-              <div class="product-card-buttons">
+              <div class="product-card-grid">
+                <p class="product-card-name par-18">Гостиница</p>
+                <p class="product-card-name par-18">От 4000 ₽</p>
                 <a class="btn product-card-more" href="#">Подробнее</a>
                 <a class="btn product-card-fav" href="#">В избранное</a>
-              </div>
-              <div class="product-card-buttons-box">
                 <span class="visually-hidden">4 звезды</span>
                 <ul class="product-card-block-stars">
 
@@ -155,42 +154,37 @@
               </div>
             </li>
             <li class="product-card">
-              <a class="product-card-link link" href="#">
-                <img class="product-card-image" src="images/villas_at_poco.jpg" alt="Villas at Poco Diablo">
+
+              <img class="product-card-image" src="images/villas_at_poco.jpg" alt="Villas at Poco Diablo">
+              <a class="product-card-link" href="#">
                 <h3 class="product-card-caption">Villas at Poco Diablo</h3>
               </a>
-              <p class="product-card-name par-18">Гостиница</p>
-              <p class="product-card-name par-18">От 5000 ₽</p>
-              <div class="product-card-buttons">
+              <div class="product-card-grid">
+                <p class="product-card-name par-18">Гостиница</p>
+                <p class="product-card-name par-18">От 5000 ₽</p>
                 <a class="btn product-card-more" href="#">Подробнее</a>
                 <a class="btn product-card-fav" href="#">В избранное</a>
-              </div>
-              <div class="product-card-buttons-box">
                 <span class="visually-hidden">4 звезды</span>
                 <ul class="product-card-block-stars">
-
                   <li class="product-card-star"></li>
                   <li class="product-card-star"></li>
                   <li class="product-card-star"></li>
                   <li class="product-card-star"></li>
                 </ul>
-
-
                 <a class="btn product-card-rating">Рейтинг: 9,2</a>
               </div>
             </li>
             <li class="product-card">
-              <a class="product-card-link link" href="#">
-                <img class="product-card-image" src="images/desert_quail.jpg" alt="Desert Quail Inn">
+
+              <img class="product-card-image" src="images/desert_quail.jpg" alt="Desert Quail Inn">
+              <a class="product-card-link" href="#">
                 <h3 class="product-card-caption">Desert Quail Inn</h3>
               </a>
-              <p class="product-card-name par-18">Гостиница</p>
-              <p class="product-card-name par-18">От 2500 ₽</p>
-              <div class="product-card-buttons">
+              <div class="product-card-grid">
+                <p class="product-card-name par-18">Гостиница</p>
+                <p class="product-card-name par-18">От 2500 ₽</p>
                 <a class="btn product-card-more" href="#">Подробнее</a>
                 <a class="btn product-card-fav" href="#">В избранное</a>
-              </div>
-              <div class="product-card-buttons-box">
                 <span class="visually-hidden">3 звезды</span>
                 <ul class="product-card-block-stars">
 
@@ -203,17 +197,16 @@
               </div>
             </li>
             <li class="product-card">
-              <a class="product-card-link link" href="#">
-                <img class="product-card-image" src="images/greetree_inn.jpg" alt="GreenTree Inn">
+
+              <img class="product-card-image" src="images/greetree_inn.jpg" alt="GreenTree Inn">
+              <a class="product-card-link" href="#">
                 <h3 class="product-card-caption">GreenTree Inn</h3>
               </a>
-              <p class="product-card-name par-18">Гостиница</p>
-              <p class="product-card-name par-18">От 1500 ₽</p>
-              <div class="product-card-buttons">
+              <div class="product-card-grid">
+                <p class="product-card-name par-18">Гостиница</p>
+                <p class="product-card-name par-18">От 1500 ₽</p>
                 <a class="btn product-card-more" href="#">Подробнее</a>
                 <a class="btn product-card-fav" href="#">В избранное</a>
-              </div>
-              <div class="product-card-buttons-box">
                 <span class="visually-hidden">2 звезды</span>
                 <ul class="product-card-block-stars">
 
@@ -247,7 +240,7 @@
               <a class="pagination-link" href="#">10</a>
             </li>
           </ul>
-          <div class="hotel-on-page">
+          <div class="pagination-number-on-page">
             <p class="par-18">Гостиниц на странице:</p>
             <select class="select-control" aria-label="Количество на странице">
               <option value="1">1</option>
