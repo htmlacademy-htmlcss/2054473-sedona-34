@@ -121,6 +121,7 @@ body {
   z-index: 1;
   margin-bottom: -10px;
   margin-right: 47px;
+  outline: none;
 }
 
 .logo img {
@@ -175,7 +176,7 @@ body {
 .product-card-more:active,
 .btn-hotel:active {
   color: rgba(255, 255, 255, 0.3);
-
+  opacity: 0.8;
 }
 
 .btn-here:hover,
@@ -279,6 +280,7 @@ body {
 .slider-slogan {
   width: 457px;
   height: 387px;
+  margin-top: -30px;
 }
 
 /* == Privilege == */
@@ -404,21 +406,21 @@ body {
 .reason-img-home {
   background: url('../images/ico/housing.svg')no-repeat;
   width: 75px;
-  height: 74px;
+  height: 72px;
   margin-bottom: 30px;
 }
 
 .reason-img-food {
   background: url('../images/ico/food.svg')no-repeat;
-  width: 84px;
-  height: 84px;
+  width: 74px;
+  height: 70px;
   margin-bottom: 31px;
 }
 
 .reason-img-relic {
   background: url('../images/ico/souvenir.svg')no-repeat;
   width: 64px;
-  height: 84px;
+  height: 76px;
   margin-bottom: 28px;
 }
 
@@ -517,11 +519,16 @@ body {
   border: none;
   background-color: #f2f2f2;
   border-radius: 10px 0 0 10px;
-  width: 600px;
+  width: 596px;
+  max-width: 600px;
   font-size: 18px;
   line-height: 21px;
   color: #000;
+}
+
+.subscribe-input::placeholder {
   padding-left: 22px;
+
 }
 
 .btn-mail-sub {
@@ -629,15 +636,20 @@ body {
 }
 
 .footer-html-logo-inner {
+  display: block;
   outline: none;
 }
 
-.footer-academy-logo:active {
+.footer-html-logo:active .footer-academy-logo {
   color: #756157;
   opacity: 0.3;
 }
 
-.footer-html-logo-inner .footer-academy-logo:hover {
+.footer-html-logo:hover .footer-academy-logo {
+  color: #756157;
+}
+
+.footer-html-logo-inner:focus .footer-academy-logo {
   color: #756157;
 }
 
@@ -647,9 +659,10 @@ body {
 /* == Category Filter == */
 
 .cat-filter {
-  display: flex;
-  height: 403px;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
+  height: 368px;
+  max-height: 403px;
   background: url('../images/background_filter.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -676,12 +689,25 @@ body {
   color: #242424;
   list-style-type: none;
   margin-bottom: 40px;
+  margin-left: -3px;
 }
 
 .filter-breadcrumbs-link {
   color: #fff;
   text-decoration: none;
+  outline: none;
 }
+
+.filter-breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.6);
+
+}
+
+.filter-breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+
+}
+
 
 .filter-breadcrumbs-item {
   position: relative;
@@ -735,6 +761,7 @@ body {
 .btn-mail-sub:active,
 .product-card-fav:active {
   color: rgba(255, 255, 255, 0.3);
+  opacity: 0.8;
 
 }
 
@@ -764,6 +791,7 @@ body {
   padding: 0;
   margin-top: 20px;
   margin-left: 118px;
+  outline: none;
 }
 
 
@@ -852,69 +880,7 @@ body {
   padding-bottom: 56px;
   padding-left: 72px;
   padding-right: 71px;
-}
-
-
-.product-sort-btn {
-  display: flex;
-  /*align-items: center;
-  width: 168px;
-  height: 48px;*/
-  padding: 0;
-  margin: 0;
-}
-
-.product-sort-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.product-sort-ico-plitka {
-  display: block;
-  width: 19px;
-  height: 19px;
-  background-image: url('../images/ico/tile.svg');
-  /* background-repeat: no-repeat;
-  background-size: 100%; */
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  outline: 2px solid #E5E5E5;
-  border-radius: 4px;
-}
-
-
-.button:not(:nth-child(3)) {
-  margin-right: 12px;
-}
-
-.button-active {
-  outline: 2px solid #000;
-}
-
-
-.product-sort-ico-cart {
-  width: 19px;
-  height: 19px;
-  background-image: url('../images/ico/slideshow.svg');
-  /* background-repeat: no-repeat;
-  background-size: 100%; */
-}
-
-.product-sort-ico-spisok {
-  width: 19px;
-  height: 19px;
-  background-image: url('../images/ico/list.svg');
-  /* background-repeat: no-repeat;
-  background-size: 100%; */
+  outline: none;
 }
 
 .product-sort-caption {
@@ -926,7 +892,7 @@ body {
 }
 
 .product-select-control {
-  width: 290px;
+  width: 286px;
   height: 49px;
   display: flex;
   flex-direction: row;
@@ -939,6 +905,83 @@ body {
   margin-right: 80px;
   border: none;
 }
+
+
+.product-sort-btn {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:not(:nth-child(3)) {
+  margin-right: 12px;
+}
+
+
+.product-sort-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 44px;
+  border-radius: 4px;
+  outline: 2px solid #E5E5E5;
+  text-decoration: none;
+}
+
+.product-sort-active {
+  outline: 2px solid #000;
+}
+
+.product-sort-link:active {
+  outline: 2px solid #000;
+}
+
+/*******************************************************************************************************/
+.product-sort-link:focus-visible {
+  outline: 2px solid #68A2CA;
+  /* если ставлю просто focus - то при клике мышки появляется синяя рамка, а при таб на клаве - рамка черная...
+  И откуда то лезет отступ при нажатии таб в 1-2px*/
+}
+
+/*******************************************************************************************************/
+
+.product-sort-link:hover {
+  outline: 2px solid #000;
+}
+
+.product-sort-ico-plitka {
+  display: block;
+  width: 16px;
+  height: 14px;
+  background-image: url('../images/ico/icon-table.svg');
+  /* background-repeat: no-repeat;
+  background-size: 100%; */
+}
+
+.product-sort-ico-cart {
+  width: 16px;
+  height: 14px;
+  background-image: url('../images/ico/icon-slideshow.svg');
+  /* background-repeat: no-repeat;
+  background-size: 100%; */
+}
+
+.product-sort-ico-spisok {
+  width: 16px;
+  height: 14px;
+  background-image: url('../images/ico/icon-list.svg');
+  /* background-repeat: no-repeat;
+  background-size: 100%; */
+}
+
+
 
 /* == Category Products == */
 
@@ -980,6 +1023,7 @@ body {
   color: #000;
   text-decoration: none;
   margin-bottom: 16px;
+  outline: none;
 }
 
 .product-card-caption {
@@ -1014,6 +1058,18 @@ body {
   outline: none;
 }
 
+/* -- Деактивированная кнопка -- */
+.product-card-deactive {
+  padding: 8px 12px;
+  max-height: 37px;
+  align-self: center;
+  outline: none;
+  background-color: #E5E5E5;
+  color: #fff;
+}
+
+/* -- Деактивированная кнопка -- */
+
 .product-card-fav {
   background-color: #82B3D3;
   padding: 8px 12px;
@@ -1032,6 +1088,8 @@ body {
 
 .product-card-in-fav:active {
   color: rgba(255, 255, 255, 0.3);
+  opacity: 0.8;
+
 }
 
 .product-card-in-fav:hover {
@@ -1067,7 +1125,7 @@ body {
 
 .product-card-rating {
   font-weight: 400;
-  background-color: #ccc;
+  background-color: #f2f2f2;
   color: #333;
   cursor: auto;
   padding: 8px 12px 8px 12px;
@@ -1141,6 +1199,7 @@ body {
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
+  outline: none;
 }
 
 .pagination-current {
@@ -1148,29 +1207,17 @@ body {
   background-color: #F2F2F2;
 }
 
-.pagination-link:hover {
+.pagination-active:active {
+  opacity: 0.4;
+}
+
+.pagination-active:hover {
   background-color: #68A2CA;
 }
 
-.pagination-link:focus {
+.pagination-active:focus {
   background-color: #68A2CA;
 }
-
-.pagination-link:not(:nth-child(3)):active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
-/*
-.pagination-link:hover {
-	background-color: #68A2CA;
-	color:#fff;
-}
-
-.pagination-link:focus {
-	background-color: #68A2CA;
-}
-*/
-
 
 .pagination-number-on-page {
   display: flex;
