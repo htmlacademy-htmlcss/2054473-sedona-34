@@ -62,49 +62,82 @@
             </li>
           </ul>
           <form action="https://echo.htmlacademy.ru" class="form-filter" method="post">
-            <fieldset class="no-border filter-field">
-              <legend class="par-20">Инфраструктура:</legend>
-              <label for="bas" class="filter-label">
-                <input type="checkbox" id="bas" name="hotel" value="pool" checked>Бассейн
-              </label>
-              <label for="parking" class="filter-label">
-                <input type="checkbox" id="parking" name="hotel" value="parking" checked>Парковка
-              </label>
-              <label for="wifi" class="filter-label">
-                <input type="checkbox" id="wifi" name="hotel" value="wifi">Wi-Fi
-              </label>
+
+            <fieldset class="form-filter-group">
+              <legend class="form-filter-title">Инфраструктура:</legend>
+              <ul class="form-filter-list">
+                <li class="form-filter-item">
+                  <label for="bas" class="control">
+                    <input class="visually-hidden control-input" type="checkbox" id="bas" name="land" value="pool"
+                      checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Бассейн</span>
+                  </label>
+                </li>
+                <li class="form-filter-item">
+                  <label for="parking" class="control">
+                    <input class="visually-hidden control-input" type="checkbox" id="parking" name="land"
+                      value="parking" checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Парковка</span>
+                  </label>
+                </li>
+                <li class="form-filter-item">
+                  <label for="wifi" class="control">
+                    <input class="visually-hidden control-input" type="checkbox" id="wifi" name="land" value="wifi">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Wi-Fi</span>
+                  </label>
+                </li>
+
+              </ul>
             </fieldset>
-            <fieldset class="no-border filter-field">
-              <legend class="par-20">Тип Жилья:</legend>
-              <label for="hotel" class="filter-label">
-                <input type="radio" id="hotel" name="hotel" value="hotel" checked>Гостиница
-              </label>
-              <label for="motel" class="filter-label">
-                <input type="radio" id="motel" name="hotel" value="motel">Мотель
-              </label>
-              <label for="apart" class="filter-label">
-                <input type="radio" id="apart" name="hotel" value="aparts">Апартаменты
-              </label>
+            <fieldset class="form-filter-group">
+              <legend class="form-filter-title">Тип Жилья:</legend>
+              <ul class="form-filter-list">
+                <li class="form-filter-item">
+                  <label for="hotel" class="control">
+                    <input class="visually-hidden control-input" type="radio" id="hotel" name="hotel" value="hotel"
+                      checked>
+                    <span class="control-mark"></span>
+                    <span class="control-label">Гостиница</span>
+                  </label>
+                </li>
+                <li class="form-filter-item">
+                  <label for="motel" class="control">
+                    <input class="visually-hidden control-input" type="radio" id="motel" name="hotel" value="motel">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Мотель</span>
+                  </label>
+                </li>
+                <li class="form-filter-item">
+                  <label for="apart" class="control">
+                    <input class="visually-hidden control-input" type="radio" id="apart" name="hotel" value="aparts">
+                    <span class="control-mark"></span>
+                    <span class="control-label">Апартаменты</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
 
             <fieldset class="no-border filter-field-price">
-              <legend class="par-20">Стоимость, ₽:</legend>
+              <legend class="form-filter-price">Стоимость, ₽:</legend>
               <div class="bimba">
                 <label for="min" class="filter-label-min-max-price filter-label-left">
-                  <input class="min-max-price" type="text" id="min" placeholder="0" value="0"><span
+                  <input class="min-max-price" type="number" id="min" placeholder="0" value="0"><span
                     class="price-label">от</span>
                 </label>
                 <label for="chosen" class="filter-label-min-max-price">
-                  <input class="min-max-price" type="text" id="chosen" placeholder="0" value="9000"><span
+                  <input class="min-max-price" type="number" id="chosen" placeholder="0" value="9000"><span
                     class="price-label">до</span>
                 </label>
                 <button class="btn filter-btn-sub" type="submit">Применить</button>
                 <div class="filter-range-scale">
                   <div class="filter-range-bar" style="left: 80%; width: 58px">
-                    <button class="filter-range-toggle toggle-min">
+                    <button class="filter-range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
-                    <button class="filter-range-toggle toggle-max">
+                    <button class="filter-range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
                   </div>
