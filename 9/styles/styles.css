@@ -3,8 +3,8 @@
   font-weight: 400;
   font-style: normal;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap;
-  /* своевременная подгрузка шрифта */
+  font-display: swap; /* своевременная подгрузка шрифта */
+
 }
 
 @font-face {
@@ -87,12 +87,6 @@ body {
 
 /* == Header Navigation == */
 
-/*
-.header-nav {
-  margin-bottom: -10px;
-}
-*/
-
 .nav {
   display: flex;
   justify-content: start;
@@ -122,7 +116,6 @@ body {
   text-transform: capitalize;
   text-decoration: none;
   color: #000000;
-  /* outline: none; */
 }
 
 .btn a {
@@ -146,7 +139,7 @@ body {
   padding: 8px 27px 8px 27px;
 }
 
-/* - Кнопки и ссылки не активные - */
+/* - btn & links not active - */
 
 .btn:disabled {
   outline: none;
@@ -294,10 +287,6 @@ body {
   margin: auto;
   height: 485px;
   width: 100%;
-  /*display: flex;
-  justify-content: center;
-  align-items: start;*/
-
 }
 
 .slider-slogan {
@@ -577,7 +566,7 @@ body {
 
 
 .subscribe-input:active {
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border: 2px solid #000000;
   color: #000000;
 }
@@ -715,10 +704,6 @@ body {
 /* == Category Filter == */
 
 .cat-filter {
-  /*display: flex;
-  flex-direction: column;
-  min-height: 368px;
-  max-height: 403px;*/
   background-image: url('../images/background_filter.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -944,7 +929,7 @@ body {
 .filter-label-right:focus-within,
 .filter-label-left:focus-within {
   border: 2px solid #FFFFFF;
-  box-shadow: 0px 0px 0px 3px #81B3D2, 0px 0px 0px 3px #81B3D2 inset;
+  box-shadow: 0 0 0 3px #81B3D2, 0 0 0 3px #81B3D2 inset;
 }
 
 .filter-label-min-max-price:active {
@@ -957,7 +942,6 @@ body {
   font-family: 'PT Sans';
   font-size: 18px;
   line-height: 21px;
-  /*height: 48px;*/
   padding: 0;
   margin: 0;
   margin-top: 1px;
@@ -1163,7 +1147,6 @@ input[type="number"] {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  /* text-transform: capitalize;*/
   margin: 0;
 }
 
@@ -1386,7 +1369,6 @@ input[type="number"] {
 
 .form-filter-price {
   margin-bottom: 35px;
-
 }
 
 .control {
@@ -1410,9 +1392,8 @@ input[type="number"] {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-
 .control:focus-within .control-mark {
-  background: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   border: 3px solid #83B3D3;
 }
 
@@ -1420,11 +1401,6 @@ input[type="number"] {
   background-color: rgba(255, 255, 255, 0.3);
   outline: 3px solid #83B3D3;
 }
-
-/*
-.control-input:disabled + .control-mark {
-  border-color: #242424;
-}*/
 
 /* Checkbox */
 .control-input[type="checkbox"]:checked + .control-mark::before {
@@ -1500,6 +1476,7 @@ input[type="number"] {
   z-index: 3;
 }
 
+
 .modal-container-close {
   display: none;
 }
@@ -1537,23 +1514,6 @@ input[type="number"] {
   cursor: pointer;
 }
 
-.modal-i-button {
-  position: absolute;
-  padding: 12.5px 12.5px;
-  top: 353px;
-  right: 220px;
-  width: 1px;
-  height: 9px;
-  background-color: #83B3D3;
-  border-radius: 28px;
-  color: #ffffff;
-  border: none;
-  background-image: url(../images/ico/i.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
 .modal-title {
   margin: 0;
   margin-bottom: 63px;
@@ -1563,26 +1523,22 @@ input[type="number"] {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  padding-right: 63px;
 }
 
 
 .data-field-false {
-  position: absolute;
-  top: 220px;
-  right: 210px;
-  font-size: 16px;
-  line-height: 21px;
   color: #FF5757;
 }
 
-.data-field-true {
-  position: absolute;
-  top: 310px;
-  right: 160px;
+.data-field {
+  display: block;
   font-size: 16px;
   line-height: 21px;
+  margin: 0;
+  margin-left: 155px;
+  padding-top: 8px;
 }
-
 
 .modal-form .field-group {
   margin: 0;
@@ -1594,13 +1550,13 @@ input[type="number"] {
   display: flex;
   justify-content: start;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .modal-form-field {
   background-color: #F2F2F2;
   outline: none;
   border: none;
-
 }
 
 .modal-form .field {
@@ -1621,7 +1577,7 @@ input[type="number"] {
   line-height: 21px;
   padding: 0;
   text-align: center;
-  background: #F2F2F2;
+  background-color: #F2F2F2;
   border: none;
   outline: none;
   height: 50px;
@@ -1659,14 +1615,13 @@ input[type="number"] {
   font-weight: bold;
   margin: 0;
   margin-left: 56px;
-  margin-right: 50px;
+  margin-right: 7px;
 }
 
 .quantity_inner {
   display: inline-flex;
   border-radius: 26px;
 }
-
 
 .bt_minus {
   border-radius: 4px 0 0 4px;
@@ -1684,15 +1639,14 @@ input[type="number"] {
   padding: 0;
   border: 0;
   margin: 0;
-  background: #f2f2f2;
-  ;
+  background-color: #f2f2f2;
   cursor: pointer;
   outline: 0;
 }
 
 .quantity_inner .bt_minus svg,
 .quantity_inner .bt_plus svg {
-  stroke: #ccc;
+  stroke: #cccccc;
   transition: 0.5s;
   margin: 0;
   margin-top: 2px;
@@ -1701,7 +1655,7 @@ input[type="number"] {
 
 .quantity_inner .bt_minus:hover svg,
 .quantity_inner .bt_plus:hover svg {
-  stroke: #000;
+  stroke: #000000;
 }
 
 .filter-btn-popup {
@@ -1720,8 +1674,6 @@ input[type="number"] {
 
 /* == Tooltip == */
 
-
-
 .tooltip {
   position: relative;
   display: inline-block;
@@ -1729,10 +1681,7 @@ input[type="number"] {
 }
 
 .tooltip-i-button {
-  position: absolute;
   padding: 12.5px 12.5px;
-  top: 353px;
-  right: 220px;
   width: 1px;
   height: 9px;
   background-color: #83B3D3;
@@ -1743,6 +1692,7 @@ input[type="number"] {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  margin-right: 17px;
 }
 
 
@@ -1751,9 +1701,9 @@ input[type="number"] {
   width: 216px;
   height: 106px;
   background-color: #333333;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  color: #fff;
+  color: #ffffff;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
