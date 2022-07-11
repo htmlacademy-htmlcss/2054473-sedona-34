@@ -287,10 +287,10 @@ body {
 
 .main-slider {
   position: relative;
-  background-image: url('../images/welcome.svg'), url('../images/slider_background.jpg');
-  background-size: auto, cover;
-  background-repeat: no-repeat, no-repeat;
-  background-position: top 50px center, center;
+  background-image: url('../images/welcome.svg'), url('../images/ico/divider.svg'), url('../images/slider_background.jpg');
+  background-size: auto, auto, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top 50px center, bottom 0 center, center;
   margin: auto;
   height: 485px;
   width: 100%;
@@ -884,8 +884,8 @@ body {
 }
 
 .filter-range-toggle:focus {
-  border: 2px solid #83B3D3;
-  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
+  border: 3px solid #83B3D3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .filter-range-toggle:active {
@@ -917,7 +917,7 @@ body {
   padding: 0;
 }
 
-.bimba {
+.filter-price-box {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -941,16 +941,11 @@ body {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-
-/* Focus не понимаю как сделать - при табуляции выделяется значение в инпуте
-
-.filter-label-min-max-price:focus {
-border: 2px solid #FFFFFF;
-box-shadow: 0px 0px 0px 3px #81B3D2;
-border-radius: 4px 0px 0px 4px;
+.filter-label-right:focus-within,
+.filter-label-left:focus-within {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 0px 0px 3px #81B3D2, 0px 0px 0px 3px #81B3D2 inset;
 }
-
-*/
 
 .filter-label-min-max-price:active {
   background-color: #756257;
@@ -958,6 +953,7 @@ border-radius: 4px 0px 0px 4px;
 }
 
 .min-max-price {
+  box-sizing: content-box;
   font-family: 'PT Sans';
   font-size: 18px;
   line-height: 21px;
@@ -1366,9 +1362,6 @@ input[type="number"] {
 }
 
 
-
-
-
 /* Group */
 .form-filter-group {
   margin: 0;
@@ -1417,8 +1410,10 @@ input[type="number"] {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control .control-mark:focus-within {
-  background-color: red;
+
+.control:focus-within .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+  border: 3px solid #83B3D3;
 }
 
 .control:active .control-mark {
@@ -1489,3 +1484,302 @@ input[type="number"] {
 .form-filter-item:not(:last-child) {
   margin-bottom: 16px;
 }
+
+
+/* == Modal window == */
+
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 3;
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  z-index: 3;
+  position: relative;
+  margin: auto;
+  padding: 40px;
+  background-color: #ffffff;
+  width: 575px;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  padding-top: 62px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 70px;
+  top: 45px;
+}
+
+
+.modal-close-button {
+  position: absolute;
+  padding: 26.5px 26.5px;
+  top: 54px;
+  right: 70px;
+  width: 13px;
+  height: 13px;
+  background-color: #F2F2F2;
+  border-radius: 28px;
+  border: none;
+  background-image: url(../images/ico/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-i-button {
+  position: absolute;
+  padding: 12.5px 12.5px;
+  top: 353px;
+  right: 220px;
+  width: 1px;
+  height: 9px;
+  background-color: #83B3D3;
+  border-radius: 28px;
+  color: #ffffff;
+  border: none;
+  background-image: url(../images/ico/i.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 63px;
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+
+.data-field-false {
+  position: absolute;
+  top: 220px;
+  right: 210px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FF5757;
+}
+
+.data-field-true {
+  position: absolute;
+  top: 310px;
+  right: 160px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+
+.modal-form .field-group {
+  margin: 0;
+  margin-bottom: 40px;
+  height: 50px;
+}
+
+.field-group {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.modal-form-field {
+  background-color: #F2F2F2;
+  outline: none;
+  border: none;
+
+}
+
+.modal-form .field {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  width: 381px;
+  height: 50px;
+  border-radius: 4px;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+
+.man-number {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 0;
+  text-align: center;
+  background: #F2F2F2;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 33px;
+}
+
+
+.modal-date-name {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  margin: 0;
+  margin-right: 42px;
+}
+
+.modal-endata-name {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  margin: 0;
+  margin-right: 37px;
+}
+
+.modal-old-name {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  margin: 0;
+  margin-right: 64px;
+}
+
+.modal-young-name {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  margin: 0;
+  margin-left: 56px;
+  margin-right: 50px;
+}
+
+.quantity_inner {
+  display: inline-flex;
+  border-radius: 26px;
+}
+
+
+.bt_minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.bt_plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.quantity_inner .bt_minus,
+.quantity_inner .bt_plus,
+.quantity_inner .quantity {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: #f2f2f2;
+  ;
+  cursor: pointer;
+  outline: 0;
+}
+
+.quantity_inner .bt_minus svg,
+.quantity_inner .bt_plus svg {
+  stroke: #ccc;
+  transition: 0.5s;
+  margin: 0;
+  margin-top: 2px;
+  width: 22px;
+}
+
+.quantity_inner .bt_minus:hover svg,
+.quantity_inner .bt_plus:hover svg {
+  stroke: #000;
+}
+
+.filter-btn-popup {
+  border-radius: 10px;
+  height: 60px;
+  width: 575px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+.filter-btn-popup:focus-visible {
+  border: 3px solid #756257;
+}
+
+
+/* == Tooltip == */
+
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
+
+.tooltip-i-button {
+  position: absolute;
+  padding: 12.5px 12.5px;
+  top: 353px;
+  right: 220px;
+  width: 1px;
+  height: 9px;
+  background-color: #83B3D3;
+  border-radius: 28px;
+  color: #ffffff;
+  border: none;
+  background-image: url(../images/ico/i.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 216px;
+  height: 106px;
+  background-color: #333333;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: left;
+  top: 40px;
+  left: -56px;
+  padding: 15px 18px 18px 22px;
+  margin-left: -60px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #333333 transparent;
+}
+
+/* == END Tooltip == */

@@ -50,8 +50,8 @@
         <section class="main-slider">
           <h1 class="visually-hidden">Гостинницы Седоны</h1>
           <!--<img src="images/welcome.svg" alt="Welcome to the gorgeous Sedona" class="slider-slogan" width="457"
-            height="357">-->
-          <span class="slider-divider"></span>
+            height="357">
+          <span class="slider-divider"></span>-->
         </section>
 
         <section class="privilege">
@@ -197,6 +197,80 @@
         </div>
       </footer>
     </div>
+
+
+    <div class="modal-container modal-container-close">
+      <div class="modal">
+        <button class="modal-close-button " type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label for="data-incoming" class="modal-date-name">Дата Заезда:</label>
+              <!--<span class="modal-data-up">27 Апреля 2020</span>-->
+              <input class="modal-form-field field" type="date" id="data-incoming" name="data-incoming"
+                value="2020-04-27" max="2021-12-31" min="2020-01-01"><span class="data-field-false">Мы не можем
+                отправить вас в прошлое.</span>
+            </p>
+            <p class="field-group">
+              <label for="data-end" class="modal-endata-name">Дата Выезда:</label>
+              <!--<span class="modal-data-up">01 Сентября 2021</span>-->
+              <input class="modal-form-field field" type="date" id="data-end" name="data-end" value="2021-09-01"
+                max="2021-12-31" min="2020-01-01"><span class="data-field-true">На эти даты есть свободные номера. Пока
+                есть.</span>
+            </p>
+
+            <div class="field-group">
+              <label for="old" class="modal-old-name">Взрослые:</label>
+              <div class="quantity_inner">
+                <button class="bt_minus" type="button">
+                  <svg viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+                <input class="modal-form-field man-number" type="number" id="old" name="old" value="2" max="6" min="1">
+                <button class="bt_plus" type="button">
+                  <svg viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+              <label for="young" class="modal-young-name">Дети:</label>
+
+              <button class="tooltip-i-button tooltip" type="button">
+                <span class="visually-hidden">Инфо</span>
+                <span class="tooltiptext">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18
+                  лет. Дети до 6 лет размещаются бесплатно.
+                </span>
+              </button>
+
+              <div class="quantity_inner">
+                <button class="bt_minus" type="button">
+                  <svg viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+
+                <input class="modal-form-field man-number" type="number" id="young" name="young" value="1" max="6"
+                  min="1">
+                <button class="bt_plus" type="button">
+                  <svg viewBox="0 0 24 24">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <button class="btn btn-mail-sub filter-btn-popup" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
   </body>
 
 </html>
