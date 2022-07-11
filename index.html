@@ -49,9 +49,6 @@
       <main>
         <section class="main-slider">
           <h1 class="visually-hidden">Гостинницы Седоны</h1>
-          <!--<img src="images/welcome.svg" alt="Welcome to the gorgeous Sedona" class="slider-slogan" width="457"
-            height="357">
-          <span class="slider-divider"></span>-->
         </section>
 
         <section class="privilege">
@@ -207,20 +204,20 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group">
+            <div class="field-group">
               <label for="data-incoming" class="modal-date-name">Дата Заезда:</label>
               <!--<span class="modal-data-up">27 Апреля 2020</span>-->
               <input class="modal-form-field field" type="date" id="data-incoming" name="data-incoming"
-                value="2020-04-27" max="2021-12-31" min="2020-01-01"><span class="data-field-false">Мы не можем
-                отправить вас в прошлое.</span>
-            </p>
-            <p class="field-group">
+                value="2020-04-27" max="2021-12-31" min="2020-01-01">
+              <p class="data-field data-field-false">Мы не можем отправить вас в прошлое.</p>
+            </div>
+            <div class="field-group">
               <label for="data-end" class="modal-endata-name">Дата Выезда:</label>
               <!--<span class="modal-data-up">01 Сентября 2021</span>-->
               <input class="modal-form-field field" type="date" id="data-end" name="data-end" value="2021-09-01"
-                max="2021-12-31" min="2020-01-01"><span class="data-field-true">На эти даты есть свободные номера. Пока
+                max="2021-12-31" min="2020-01-01"><span class="data-field">На эти даты есть свободные номера. Пока
                 есть.</span>
-            </p>
+            </div>
 
             <div class="field-group">
               <label for="old" class="modal-old-name">Взрослые:</label>
@@ -264,7 +261,6 @@
                 </button>
               </div>
             </div>
-
             <button class="btn btn-mail-sub filter-btn-popup" type="submit">Найти</button>
           </form>
         </section>
