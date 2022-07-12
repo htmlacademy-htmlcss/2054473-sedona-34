@@ -939,7 +939,7 @@ body {
 
 .min-max-price {
   box-sizing: content-box;
-  font-family: 'PT Sans';
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   padding: 0;
