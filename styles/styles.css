@@ -3,7 +3,8 @@
   font-weight: 400;
   font-style: normal;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap; /* своевременная подгрузка шрифта */
+  font-display: swap;
+  /* своевременная подгрузка шрифта */
 
 }
 
@@ -205,9 +206,11 @@ body {
 
 .nav-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
+  max-width: 600px;
 }
 
 .nav-item {
@@ -284,6 +287,7 @@ body {
   background-size: auto, auto, cover;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top 50px center, bottom 0 center, center;
+  background-color:#ffffff;
   margin: auto;
   height: 485px;
   width: 100%;
@@ -341,7 +345,6 @@ body {
   list-style: none;
   padding: 0;
   flex-wrap: wrap;
-  text-align: center;
   margin: 0;
 }
 
@@ -502,6 +505,7 @@ body {
   background-image: url('../images/background_email.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color:#ffffff;
   color: #ffffff;
   text-align: center;
   padding: 94px 0 94px 0;
@@ -597,12 +601,15 @@ body {
 }
 
 .footer-soc-list {
-  list-style: none;
+
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  list-style: none;
   padding: 0;
   margin: 0;
   margin-top: 10px;
+  max-width: 141px;
 }
 
 .footer-soc-item {
@@ -707,6 +714,7 @@ body {
   background-image: url('../images/background_filter.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #ffffff;
   padding-left: 70px;
   padding-right: 70px;
   padding-top: 35px;
@@ -1632,8 +1640,7 @@ input[type="number"] {
 }
 
 .quantity_inner .bt_minus,
-.quantity_inner .bt_plus,
-.quantity_inner .quantity {
+.quantity_inner .bt_plus{
   height: 50px;
   width: 50px;
   padding: 0;
@@ -1644,8 +1651,7 @@ input[type="number"] {
   outline: 0;
 }
 
-.quantity_inner .bt_minus svg,
-.quantity_inner .bt_plus svg {
+.quantity_inner svg {
   stroke: #cccccc;
   transition: 0.5s;
   margin: 0;
@@ -1653,8 +1659,8 @@ input[type="number"] {
   width: 22px;
 }
 
-.quantity_inner .bt_minus:hover svg,
-.quantity_inner .bt_plus:hover svg {
+.bt_minus:hover svg,
+.bt_plus:hover svg {
   stroke: #000000;
 }
 
